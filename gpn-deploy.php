@@ -21,8 +21,7 @@ function gpn_custom_css() {
 	$gpn_css = '
 
 #after-post-nav {
-	height:45px;
-	margin:10px;}
+	margin:20px;}
 
 .gps-nav-next{
 	
