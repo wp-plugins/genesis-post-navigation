@@ -1,5 +1,5 @@
 === Genesis Post Navigation===
-Contributors: Iniyan, Logeshmba
+Contributors: iniyan, logeshmba
 Donate link: http://iniyan.in/donate/
 Tags: Genesis, post navigation
 Requires at least: 3.3
@@ -17,7 +17,7 @@ Requires the Genesis framework.
 Animations: On mouseover the previous and next links can travel from north pole to south pole :) 
 But, I put just 20px.
 
-*Thanks* We get color selection options from Andrew Norcross's plugin Genesis design pallete.
+*We really thank Andrew Norcross.* We get color selection options from Andrew Norcross's plugin Genesis design pallete.
 
 == Installation ==
 
