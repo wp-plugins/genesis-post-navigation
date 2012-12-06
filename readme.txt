@@ -4,7 +4,7 @@ Donate link: http://iniyan.in/donate/
 Tags: Genesis, post navigation
 Requires at least: 3.3
 Tested up to: 3.4.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,5 +43,7 @@ You must have Genesis or a Genesis child theme installed and activated on your s
 1. This is a snapshot of the plugin.
 
 == Changelog ==
+
+Fixed bug - Conflict with message section
 
 == Upgrade Notice ==
