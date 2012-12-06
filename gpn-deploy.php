@@ -20,6 +20,10 @@ function gpn_custom_css() {
 
 	$gpn_css = '
 
+#after-post-nav {
+	height:45px;
+	margin:10px;}
+
 .gps-nav-next{
 	
 	background: none repeat scroll 0 0 '.$gpn_bg.';

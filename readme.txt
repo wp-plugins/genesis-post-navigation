@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-This Genesis Post navigation plugin adds a previous and next post links on a single post in a conventional way. This plugin creates a new Genesis settings page (Genesis Post Navigation) that allows you to Customize the post navigation colors.
+This plugin adds a previous and next post links on a single post in a conventional way. This plugin creates a new Genesis settings page (Genesis Post Navigation) that allows you to Customize the post navigation colors.
 Requires the Genesis framework. 
 
 Animations: On mouseover the previous and next links can travel from north pole to south pole :) 
