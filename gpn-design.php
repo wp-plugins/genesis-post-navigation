@@ -72,9 +72,7 @@ class Genesis_Post_Navigation_Admin extends Genesis_Admin_Boxes {
 
 			'text_color'		=> '#666666',
 
-			'text_hover'		=> '#F5F5F5',
-
-			'cat_nav'		    => '0'
+			'text_hover'		=> '#F5F5F5'	
 
 		);
 
@@ -200,12 +198,6 @@ class Genesis_Post_Navigation_Admin extends Genesis_Admin_Boxes {
 		echo '<input class="color {hash:true}" type="text" name="' . $this->get_field_name( 'text_hover' ) . '" id="' . $this->get_field_id( 'text_hover' ) . '" value="' . esc_attr( $this->get_field_value( 'text_hover' ) ) . '" size="20" />';
 
 		echo '</p>';
-		
-		echo '<p><label  id="text-hover">Navigate posts with in category</label>';?>
-
-		<input type="checkbox" name="<?php echo $this->get_field_name( 'cat_nav' ); ?>" id="<?php echo $this->get_field_id( 'cat_nav' ); ?>" value="1"<?php esc_attr( checked( $this->get_field_value( 'cat_nav' ) )); ?> />
-
-		<?php echo '</p>';
 
 
 		echo '</div>';
