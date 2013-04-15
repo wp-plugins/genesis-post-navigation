@@ -1,18 +1,11 @@
 <?php
 
 function gpn_custom_css() {
-	
-
 	// design settings array
-
 	$gpn_design	= get_option('gpn-settings');	
-
 	$gpn_bg	= $gpn_design['gpn_bg'];
-
 	$gpn_bg_hover	= $gpn_design['gpn_bg_hover'];
-
 	$text_color	= $gpn_design['text_color'];
-
 	$text_hover	= $gpn_design['text_hover'];
 
 		
@@ -21,7 +14,8 @@ function gpn_custom_css() {
 	$gpn_css = '
 
 #after-post-nav {
-	margin:20px;}
+	height:45px;
+	margin:10px;}
 
 .gps-nav-next{
 	
@@ -52,8 +46,6 @@ function gpn_custom_css() {
 	 display : block; 
 	 cursor : pointer;
 	 }
-
-   
 
 .gps-nav-prev a, .gps-nav-next a{
 	     display : block;
@@ -98,3 +90,47 @@ function gpn_generate_css(){
 	echo '<style>'.  gpn_custom_css()  .'</style>' ;
 	}
 }
+
+//Adds Post Navigation Below every single post page	
+
+add_action( 'genesis_after_post_content', 'gpn_after_post' );
+add_action('wp_enqueue_scripts', 'gpn_custom_script');
+
+function gpn_custom_script(){
+ wp_enqueue_script( 'gpn-custom-script', plugins_url( '/js/gpn_custom_script.js', __FILE__ ) );
+}
+
+function gpn_after_post() {
+
+	$gpn_design	= get_option('gpn-settings');	
+	$cat_nav = $gpn_design['cat_nav'];
+
+   if ( ! is_singular( 'post' ) )
+
+   return; 
+   
+   
+   if ( $cat_nav == "1") {?>
+
+					<div id="after-post-nav">
+					<span class="gps-nav-prev">
+					<?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'gpn') . '</span> %title', true ); ?></span>
+					<span class="gps-nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'gpn`' ) . '</span>', true ); ?>
+					</span>
+					</div><!-- #nav-single -->
+
+<?php } else { 
+
+ 
+?>
+				  <div id="after-post-nav">
+				  <span class="gps-nav-prev">
+				  <?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'gpn') . '</span> %title'); ?></span>
+				  <span class="gps-nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'gpn`' ) . '</span>'); ?>
+				  </span>
+				  </div><!-- #nav-single -->
+
+	           <?php } 
+
+}
+
