@@ -94,6 +94,11 @@ function gpn_generate_css(){
 //Adds Post Navigation Below every single post page	
 
 add_action( 'genesis_after_post_content', 'gpn_after_post' );
+add_action('wp_enqueue_scripts', 'gpn_custom_script');
+
+function gpn_custom_script(){
+ wp_enqueue_script( 'gpn-custom-script', plugins_url( '/js/gpn_custom_script.js', __FILE__ ) );
+}
 
 function gpn_after_post() {
 
