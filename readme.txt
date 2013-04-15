@@ -57,6 +57,9 @@ Fixed bug - Conflict with message section
 =2.0.0=
 Added option to navigate posts with in category
 
+=2.0.1=
+Fixed bug - Empty navigation when there is no next or previous posts
+
 == Upgrade Notice ==
 
 From version 2.0.0, We provide you with an option to navigate posts with in category
