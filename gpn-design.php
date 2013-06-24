@@ -72,7 +72,10 @@ class Genesis_Post_Navigation_Admin extends Genesis_Admin_Boxes {
 
 			'text_color'		=> '#666666',
 
-			'text_hover'		=> '#F5F5F5'	
+			'text_hover'		=> '#F5F5F5',
+
+			'cat_nav'		    => '0',
+			'gpn_cat_exclude'   => ''
 
 		);
 
@@ -175,14 +178,11 @@ class Genesis_Post_Navigation_Admin extends Genesis_Admin_Boxes {
 
 		echo '</p>';
 
-
-
 		echo '<p><label  id="bg-hover">BackGround Hover</label>';
 
 		echo '<input class="color {hash:true}" type="text" name="' . $this->get_field_name( 'gpn_bg_hover' ) . '" id="' . $this->get_field_id( 'gpn_bg_hover' ) . '" value="' . esc_attr( $this->get_field_value( 'gpn_bg_hover' ) ) . '" size="20" />';
 
 		echo '</p>';
-
 
 
 		echo '<p><label  id="text">Text</label>';
@@ -198,8 +198,28 @@ class Genesis_Post_Navigation_Admin extends Genesis_Admin_Boxes {
 		echo '<input class="color {hash:true}" type="text" name="' . $this->get_field_name( 'text_hover' ) . '" id="' . $this->get_field_id( 'text_hover' ) . '" value="' . esc_attr( $this->get_field_value( 'text_hover' ) ) . '" size="20" />';
 
 		echo '</p>';
+		
+		echo '<p><label  id="Squared-edges">Squared edges : </label>';?>
 
+		<input type="checkbox" name="<?php echo $this->get_field_name( 'gpn_squared_edges' ); ?>" id="<?php echo $this->get_field_id( 'gpn_squared_edges' ); ?>"        value="1"<?php esc_attr( checked( $this->get_field_value( 'gpn_squared_edges' ) )); ?> />
 
+		<?php echo '</p>';	
+		
+		echo '<p><label  id="cat-nav">Navigate posts with in Category : </label>';?>
+
+		<input type="checkbox" name="<?php echo $this->get_field_name( 'cat_nav' ); ?>" id="<?php echo $this->get_field_id( 'cat_nav' ); ?>" value="1"<?php esc_attr( checked( $this->get_field_value( 'cat_nav' ) )); ?> />
+
+		<?php echo '</p>';	
+		
+		  
+		
+		echo '<p><label  id="cat-exclude">Exclude Post-Navigaion in the following Category IDs: </label>';?>
+
+		<input type="text" name="<?php echo $this->get_field_name( 'gpn_cat_exclude' ); ?>" id="<?php echo $this->get_field_id( 'gpn_cat_exclude' ); ?>" 
+        value="<?php echo esc_attr( $this->get_field_value( 'gpn_cat_exclude' ) );?>" />
+		<br /><small><strong><?php _e( 'Comma separated - 1,2,3 for example', 'genesis' ); ?></strong></small>
+		<?php echo '</p>';
+		
 		echo '</div>';
 		
 		echo 'If you like this plugin, <a href="http://iniyan.in/donate">Buy me a coffee</a>. Rate this Plugin on WordPress';
@@ -220,6 +240,7 @@ class Genesis_Post_Navigation_Admin extends Genesis_Admin_Boxes {
 		if(!empty($save_trigger) || !empty($reset_trigger) )
 
 			gpn_generate_css();
+			gpn_after_post();
 	}	
 }
 add_action( 'genesis_admin_menu', 'gpn_add_design_settings' );

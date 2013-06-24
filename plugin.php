@@ -2,10 +2,9 @@
 /*
 Plugin Name: Genesis Post navigation
 Plugin URI: http://iniyan.in/plugins/genesis-post-navigation/
-Description: This plugin adds a previous and next post links on a single post in a conventional way. This plugin creates a new Genesis settings page (Genesis Post Navigation) that allows you to Customize the post navigation colors. Requires the Genesis framework.
-
-Animations - On mouseover the previous and next links can travel from north pole to south pole :) But, I put just 20px.
-Version: 1.0.0
+Description: Genesis Post navigation plugin adds a previous and next post links on a single post in a conventional way. From the plugin settings page, you can customize the post navigation colors and also it provides an additional option to navigate posts within category. This plugin requires Genesis framework.
+Animations- On mouseover the previous and next links can travel from north pole to south pole :) But, I put just 20px.
+Version: 3.0.1
 Author: Iniyan
 Author URI: http://iniyan.in
 */
@@ -46,13 +45,8 @@ function gpn_deactivate( $genesis_version = '1.8.0', $wp_version = '3.3' ) {
 add_action( 'genesis_init', 'gpn_init', 20 );
 
 /**
-
  * Load admin menu and helper functions. Hooked to `genesis_init`.
-
  *
-
- * @since 1.8.0
-
  */
 
 function gpn_init() {
@@ -74,23 +68,5 @@ function gpn_init() {
 
 }
 
-//Adds Post Navigation Below every single post page	
 
-add_action( 'genesis_after_post_content', 'gpn_after_post' );
-
-function gpn_after_post() {
-
-   if ( ! is_singular( 'post' ) )
-
-return;?>
-
-					<div id="after-post-nav">
-
-						<span class="gps-nav-prev"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'gpn' ) . '</span> %title' ); ?></span>
-
-						<span class="gps-nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'gpn`' ) . '</span>' ); ?></span>
-
-					</div><!-- #nav-single -->
-
-<?php }
 
