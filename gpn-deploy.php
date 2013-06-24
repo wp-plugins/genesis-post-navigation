@@ -25,7 +25,7 @@ $gpn_css = "
    -o-border-radius:  0 30px 30px 0;
     padding: 10px;
     float: right;                                          
-    margin: 5px 0;
+    margin: 5px 20px 0 5px;
 	display : block; 
 	cursor : pointer;
 	}    
@@ -39,7 +39,7 @@ $gpn_css = "
 	 -o-border-radius:30px 0 0 30px;
 	 padding: 10px;
 	 float: left;
-	 margin: 5px 0;
+	 margin: 5px 20px 5px 0;
 	 display : block; 
 	 cursor : pointer;
 	 }
