@@ -4,7 +4,7 @@ Plugin Name: Genesis Post navigation
 Plugin URI: http://iniyan.in/plugins/genesis-post-navigation/
 Description: Genesis Post navigation plugin adds a previous and next post links on a single post in a conventional way. From the plugin settings page, you can customize the post navigation colors and also it provides an additional option to navigate posts within category. This plugin requires Genesis framework.
 Animations- On mouseover the previous and next links can travel from north pole to south pole :) But, I put just 20px.
-Version: 3.0.3
+Version: 3.1.0
 Author: Iniyan
 Author URI: http://iniyan.in
 */
